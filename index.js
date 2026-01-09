@@ -35,7 +35,7 @@ function createItem(item) {
 
 	// Копировать
 	duplicateButton.addEventListener('click', function () {
-		const newItem = createItem(item);
+		const newItem = createItem(textElement.textContent);
 		listElement.prepend(newItem);
 		const items = getTasksFromDOM();
 		saveTasks(items);
@@ -88,3 +88,4 @@ formElement.addEventListener('submit', function (e) {
 	}
 
 });
+

@@ -78,7 +78,7 @@ currentTasks.forEach(function (task) {
 // Добавить задачу
 formElement.addEventListener('submit', function (e) {
 	e.preventDefault();
-	const newTask = inputElement.value;
+	const newTask = inputElement.value.trim();
 	if (newTask) {
 		const newItem = createItem(newTask);
 		listElement.prepend(newItem);
@@ -86,4 +86,5 @@ formElement.addEventListener('submit', function (e) {
 		saveTasks(items);
 		inputElement.value = '';
 	}
+
 });
